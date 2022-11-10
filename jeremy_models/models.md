@@ -14,4 +14,3 @@
 - GradientBoostingClassifier
 - Random Forest
 - Ada Boost
-- Gradiant Boost
