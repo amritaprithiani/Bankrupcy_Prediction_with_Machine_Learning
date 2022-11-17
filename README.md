@@ -68,7 +68,7 @@ Description of common approach to solve the research question
 ## Cross Validation Model
 ### `scikit-learn` model
 - KFold
-    - [Analysis](amrita_models/Company_bankruptcy.ipynb)
+    - [Analysis](company_bankruptcy_prediction.ipynb)
 
 ---
 ## Data Manipulation Models
