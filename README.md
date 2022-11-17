@@ -1,12 +1,4 @@
-# Project Title
-
-Corporate Bankruptcy prediction using Machine Learning and evaluating results financial ratio calculations
-
-## Team#2 Members
-
-- Amrita Prithiani
-- Yu Takahashi
-- Jeremy Vargas
+# Predicting Bankruptcy with Machine Learning
 
 ## Project Description / Outline
 
@@ -16,25 +8,93 @@ This process is important for financial institutions and investors as they evalu
 
 This project uses financial data NASDAQ and incorporates machine learning classification algorithms to determine bankruptcy predictions.
 
-## Research Questions to Answer
 
-- Predict if company will go bankrupt within a given period of time based on data gathered.
+# Goal of this Project
+Predict if company will go bankrupt within a given period of time based on data gathered.
 
-## Datasets to be used
+# Members
 
-- [American Bankruptcy Dataset](https://github.com/sowide/bankruptcy_dataset)
+- [Amrita Prithiani](https://github.com/amritaprithiani)
+- [Jeremy Vargas](https://github.com/JeremyPVargas)
+- Yu Takahashi
+
+# Datasets
+
+Data used among this project is gathered at the link below
+
+- [Github Repository](https://github.com/sowide/bankruptcy_dataset)
 - [Bankruptcy American Dataset](Resources/american_bankruptcy_dataset)
 
-## Rough Breakdown of Tasks
+### Data Overview
+![Data Overview](slides/dataset.jpg)
 
-1. Acquire data set
-2. Confirm that data source can be used
-3. Clean and manipulate data as needed
-4. Determine proper machine learning algorithm to make prediction
-5. What machine learning we will use?
-- SVM
-- Ada Boost
-- Others (XGBoost, etc.)
 
-Compare results with calculated financial ratios
-Draw conclusions and lessons learned
+# Procedure
+
+Description of common approach to solve the research question
+
+![General Approach](slides/generalized_approach.jpg)
+
+
+# Technologies and analysis
+## Machine Learning prediction Models
+### `scikit-learn` models
+- ADA Boost Classifier
+    - [Analysis](jeremy_models/adaboost.ipynb)
+- Logistic Regression
+    - [Analysis](jeremy_models/data_ratios.ipynb)
+- SVC kernel='rbf'
+- MLP Classifier
+    - [Analysis](yu_models/machine_learning.ipynb)
+- Random Forest Classifier
+- Decision Tree Classifier
+    - [Analysis](amrita_models/Company_bankruptcy.ipynb)
+
+### `imbalanced-learn` models
+- Easy Ensemble Classifier
+- RUS Boost classifier
+- Balanced Random Forest Classifier
+    - [Analysis](yu_models/machine_learning.ipynb)
+
+### `Tensorflow Keras` model
+- Sequential
+    - [Analysis: Different Nodes](yu_models/neural_network_mod_nodes.ipynb)
+    - [Analysis: Different Parameters](yu_models/neural_network_mod_methods.ipynb)
+
+---
+## Cross Validation Model
+### `scikit-learn` model
+- KFold
+    - [Analysis](amrita_models/Company_bankruptcy.ipynb)
+
+---
+## Data Manipulation Models
+### `scikit-learn` models
+- Standard Scaler
+- Train Test Split
+- Classification Report
+- Balanced Accuracy Score
+- Confusion Matrix
+- Principal Component Analysis
+- Non-negative Matrix Factorization
+
+### `imbalanced-learn` models
+- SMOTE
+- SMOTEENN
+- SMOTETomek
+- Random Under Sampler
+- Cluster Centroids
+- Near Miss
+
+---
+## Other Libraries
+- Pandas
+- Numpy
+- joblib
+- pathlib
+- matplotlib
+- yahoo_fin
+
+# Conclusion
+
+Random Forest Classifier had the best performance which is validated via KFold cross-validation
