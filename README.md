@@ -101,3 +101,9 @@ Description of common approach to solve the research question
 # Conclusion
 
 Random Forest Classifier had the best performance which is validated via KFold cross-validation
+
+# Resources
+- [Machine Learning for Bankruptcy Prediction in the American Stock Market: Dataset and Benchmarks](https://www.mdpi.com/1999-5903/14/8/244/htm)
+- [Bankruptcy prediction dataset for american companies in the stock market](https://github.com/sowide/bankruptcy_dataset)
+- [Bankruptcy Prediction](https://www.kaggle.com/code/gcdatkin/bankruptcy-prediction/notebook)
+- [How to Plot a Confusion Matrix from a K-Fold Cross-Validation](https://towardsdatascience.com/how-to-plot-a-confusion-matrix-from-a-k-fold-cross-validation-b607317e9874)
