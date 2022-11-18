@@ -1,7 +1,7 @@
 # Predicting Bankruptcy with Machine Learning
 
 ## Overview
-[Project Presentation](Presentation_PDF.pdf)
+[Project Presentation](slides/Presentation_PDF.pdf)
 
 ## Project Description / Outline
 
