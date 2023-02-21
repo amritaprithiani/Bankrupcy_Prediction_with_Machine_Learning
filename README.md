@@ -14,6 +14,7 @@ Goal of this Project is to predict if company will go bankrupt within a given pe
 
 ## Tecnologies
 
+```python
 Language: Python 3.9.12
 
 Libraries used:
@@ -23,16 +24,17 @@ Pathlib
 Jupyter Labs
 Scikit-Learn
 Imblanced-Learn
-
+```
 ----
 
 ## Installation Guide
 
+```python
 conda install pandas
 conda install jupyterlab
 conda install -U Scikit-Learn
 conda install scikit-learn
-
+```
 ----
 
 ## Datasets
