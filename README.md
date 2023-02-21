@@ -1,8 +1,5 @@
 # Predicting Bankruptcy with Machine Learning
 
-## Overview
-[Project Presentation](slides/Presentation_PDF.pdf)
-
 ## Project Description / Outline
 
 Predicting Bankruptcy involves examining various financial performance measures of financially distressed firms.
@@ -11,98 +8,79 @@ This process is important for financial institutions and investors as they evalu
 
 This project uses financial data NASDAQ and incorporates machine learning classification algorithms to determine bankruptcy predictions.
 
+Goal of this Project is to predict if company will go bankrupt within a given period of time based on data gathered.
 
-# Goal of this Project
-Predict if company will go bankrupt within a given period of time based on data gathered.
+----
 
-# Members
+## Tecnologies
 
-- [Amrita Prithiani](https://github.com/amritaprithiani)
-- [Jeremy Vargas](https://github.com/JeremyPVargas)
-- Yu Takahashi
+Language: Python 3.9.12
 
-# Datasets
+Libraries used:
+
+Pandas
+Pathlib
+Jupyter Labs
+Scikit-Learn
+Imblanced-Learn
+
+----
+
+## Installation Guide
+
+conda install pandas
+conda install jupyterlab
+conda install -U Scikit-Learn
+conda install scikit-learn
+
+----
+
+## Datasets
 
 Data used among this project is gathered at the link below
 
 - [Github Repository](https://github.com/sowide/bankruptcy_dataset)
 - [Bankruptcy American Dataset](Resources/american_bankruptcy_dataset)
 
-### Data Overview
-![Data Overview](slides/dataset.jpg)
+----
 
+## Content
 
-# Procedure
+1. Importing libraries
+2. Importing and organizing data:
 
-Description of common approach to solve the research question
+- Relabling the columns
 
-![General Approach](slides/generalized_approach.jpg)
+3. Preprocessing:
 
+- Confirming missing data
+- scaling and spliting data
+- Oversampling with SMOTE
 
-# Technologies and analysis
-## Machine Learning prediction Models
-### `scikit-learn` models
-- ADA Boost Classifier
-    - [Analysis](jeremy_models/adaboost.ipynb)
-- Logistic Regression
-    - [Analysis](jeremy_models/data_ratios.ipynb)
-- SVC kernel='rbf'
-- MLP Classifier
-    - [Analysis](yu_models/machine_learning.ipynb)
-- Random Forest Classifier
+4. Modeling:
+
+- k-Fold cross validation
 - Decision Tree Classifier
-    - [Analysis](amrita_models/Company_bankruptcy.ipynb)
+- Random Forest Classifier
+- XGBoost
 
-### `imbalanced-learn` models
-- Easy Ensemble Classifier
-- RUS Boost classifier
-- Balanced Random Forest Classifier
-    - [Analysis](yu_models/machine_learning.ipynb)
+4. Model Analysis:
 
-### `Tensorflow Keras` model
-- Sequential
-    - [Analysis: Different Nodes](yu_models/neural_network_mod_nodes.ipynb)
-    - [Analysis: Different Parameters](yu_models/neural_network_mod_methods.ipynb)
-
----
-## Cross Validation Model
-### `scikit-learn` model
-- KFold
-    - [Analysis](company_bankruptcy_prediction.ipynb)
-
----
-## Data Manipulation Models
-### `scikit-learn` models
-- Standard Scaler
-- Train Test Split
-- Classification Report
-- Balanced Accuracy Score
 - Confusion Matrix
-- Principal Component Analysis
-- Non-negative Matrix Factorization
+- Classification report
 
-### `imbalanced-learn` models
-- SMOTE
-- SMOTEENN
-- SMOTETomek
-- Random Under Sampler
-- Cluster Centroids
-- Near Miss
+![Random Forest Classifier](/Random_Forest.png)
 
----
-## Other Libraries
-- Pandas
-- Numpy
-- joblib
-- pathlib
-- matplotlib
-- yahoo_fin
+----
 
-# Conclusion
+## Conclusion:
 
-Random Forest Classifier had the best performance which is validated via KFold cross-validation
+As per the evaluation for the 3 classification models: Random Forests, Decision Tree, and XG Boost. While all 3 models are performing well, Random Forests gave the maximum accuracy. Both precision and recall showed 90%+ with F1 score of 92%. Primary drivers for model performance was to ensure the data is balanced, scaled and cleaned. Balanced data was achieved by oversampling minority class labels using Synthetic Miniority Oversampling technique. Kfold technique was used for model evaluation and this helped with giving better insights into our data and model.
 
-# Resources
+----
+
+### Resources
+
 - [Machine Learning for Bankruptcy Prediction in the American Stock Market: Dataset and Benchmarks](https://www.mdpi.com/1999-5903/14/8/244/htm)
 - [Bankruptcy prediction dataset for american companies in the stock market](https://github.com/sowide/bankruptcy_dataset)
 - [Bankruptcy Prediction](https://www.kaggle.com/code/gcdatkin/bankruptcy-prediction/notebook)
